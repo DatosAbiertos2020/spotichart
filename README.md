@@ -1,0 +1,1 @@
+# Módulo Recolector para el Análisis del Trending Nacional de Spotify
