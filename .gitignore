@@ -4,6 +4,9 @@
 ### VS Code ###
 .vscode/
 
+### PyCharm ###
+.idea/
+
 ### Virtual Environment ###
 venv/
 
