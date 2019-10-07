@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-"""topsipy package."""
+"""topsipy package.
+"""
 
 from __future__ import unicode_literals
 
@@ -9,4 +10,7 @@ from .__about__ import (
 )
 from .spotipy import (
     generate_top_chart,
+)
+from .lyrics import (
+    get_lyrics_from_chart
 )

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 topsipy.spotipy.audio_features module.
 
@@ -16,6 +18,18 @@ spotify_attr = ['Track Id', 'acousticness', 'danceability',
                     'valence']
 
 def get_audio_features(access_token, track_id):
+    """Function to fetch the audio features of a song
+    
+    :param access_token: Spotify Web API Access Token
+    :type access_token: str
+    :param track_id: Spotify Track identifier
+    :type track_id: str
+    :raises ValueError: Spotify Request Error
+    :raises ValueError: Http Request Error
+    :return: Track's audio features
+    :rtype: dict
+    """
+    
     track_data = []
     features = pd.DataFrame
     global spotify_attr
