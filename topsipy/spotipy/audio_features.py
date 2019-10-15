@@ -55,5 +55,7 @@ def get_audio_features(access_token, track_id):
     return features
 
 def get_several_audio_features(access_token, track_id_list):
-    global spotify_attr
+    """
+    TODO
+    """
     return 0

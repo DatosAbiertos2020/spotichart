@@ -32,4 +32,4 @@ def scrap_lyrics(lyrics_url, headers=False, ad_libs=False):
         lyrics = lyrics = re.sub('[\[].*?[\]]', '', lyrics)
     if not ad_libs:
         lyrics = lyrics = re.sub('\([^)]*\)', '', lyrics)
-    return lyrics.replace('\n','')
+    return lyrics.replace('\n', ' ').replace('\r', '')
