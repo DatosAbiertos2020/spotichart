@@ -1,5 +1,7 @@
 # Topsipy
 
+![Badge](https://github.com/Manolomon/topsipy/workflows/Topsipy/badge.svg)
+
 Collector Module for Spotify National Trending Analysis
 
 ## Introduction
@@ -20,7 +22,7 @@ $ pip install topsipy
 
 ## Requirements
 
-- **Python** >= 3.4
+- **Python** >= 3.6
 - **Spotify Web API Access Token**, you can request yours [here](https://developer.spotify.com/console/get-audio-features-track/) and selecting `GET TOKEN`. Copy the token on the `OAuth Token` field.
 - (Optional) **Genius Web API Access Token**. From [the official docs page](https://docs.genius.com/#/search-h2) you can just select `Authenticate wih the Docs App To Try`, and copy the `Authorization Bearer` provided after logging in.
 
@@ -54,7 +56,7 @@ chart_with_lyrics = topsipy.get_lyrics_from_chart(genius_token, chart)
 
 A `pandas.DataFrame` will be generated with the data of interest:
 
-```bash
+```python
 >>> chart
        Position                                      Track Name           Artist  Streams  ... speechiness    tempo time_signature  valence
 0             1                                   Calma - Remix       Pedro Capó   737894  ...      0.0524  126.899              4    0.761

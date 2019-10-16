@@ -9,7 +9,6 @@ Subpackages
    topsipy.language
    topsipy.lyrics
    topsipy.spotipy
-   topsipy.utils
 
 Module contents
 ---------------
