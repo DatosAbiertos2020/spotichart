@@ -12,6 +12,14 @@ topsipy.spotipy.audio\_features module
    :undoc-members:
    :show-inheritance:
 
+topsipy.spotipy.main module
+---------------------------
+
+.. automodule:: topsipy.spotipy.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 topsipy.spotipy.top\_charts module
 ----------------------------------
 
@@ -28,3 +36,4 @@ Module contents
    :members:
    :undoc-members:
    :show-inheritance:
+   :noindex:

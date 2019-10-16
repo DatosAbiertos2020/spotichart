@@ -12,6 +12,14 @@ topsipy.lyrics.lyrics\_scraper module
    :undoc-members:
    :show-inheritance:
 
+topsipy.lyrics.main module
+--------------------------
+
+.. automodule:: topsipy.lyrics.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 topsipy.lyrics.track\_features module
 -------------------------------------
 
@@ -28,3 +36,4 @@ Module contents
    :members:
    :undoc-members:
    :show-inheritance:
+   :noindex:

@@ -8,6 +8,7 @@ from guess_language import guess_language
 
 def detect_language(text):
     """Detect the language of a given text
+    
     :param text: The text to identify the language
     :type text: str
     :return: Language code identified

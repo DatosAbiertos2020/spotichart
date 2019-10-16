@@ -1,6 +1,6 @@
 # Topsipy
 
-![Badge](https://github.com/Manolomon/topsipy/workflows/Topsipy/badge.svg)
+![Badge](https://github.com/Manolomon/topsipy/workflows/Topsipy/badge.svg) [![Documentation Status](https://readthedocs.org/projects/topsipy/badge/?version=latest)](https://topsipy.readthedocs.io/en/latest/?badge=latest) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/28b8089c9d9a4ea6ab4acb9c7407d54c)](https://www.codacy.com/manual/Manolomon/topsipy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Manolomon/topsipy&amp;utm_campaign=Badge_Grade)
 
 Collector Module for Spotify National Trending Analysis
 
@@ -10,11 +10,11 @@ The Topsipy module makes it easy for data scientist and programmers do get the f
 
 ## Documentation
 
-The oficial documentations is available on: https://topsipy.readthedocs.io/en/latest/
+The oficial documentations is available on: [Read The Docs](https://topsipy.readthedocs.io/en/latest/)
 
 ## Installation
 
-[TODO: Not Yet Published]
+TODO: Not Yet Published
 
 ```bash
 $ pip install topsipy
@@ -22,15 +22,15 @@ $ pip install topsipy
 
 ## Requirements
 
-- **Python** >= 3.6
-- **Spotify Web API Access Token**, you can request yours [here](https://developer.spotify.com/console/get-audio-features-track/) and selecting `GET TOKEN`. Copy the token on the `OAuth Token` field.
-- (Optional) **Genius Web API Access Token**. From [the official docs page](https://docs.genius.com/#/search-h2) you can just select `Authenticate wih the Docs App To Try`, and copy the `Authorization Bearer` provided after logging in.
+  - **Python** >= 3.6
+  - **Spotify Web API Access Token**, you can request yours [here](https://developer.spotify.com/console/get-audio-features-track/) and click on `GET TOKEN`. Then copy the token on the `OAuth Token` field.
+  - (Optional) **Genius Web API Access Token**. From [the official docs page](https://docs.genius.com/#/search-h2) you can just select `Authenticate wih the Docs App To Try`, and copy the `Authorization Bearer` provided after logging in.
 
 ## Synopsis
 
 ### Usage
 
-Just to get the audio features, given a date of any top chart
+Just to get the audio features, given a date (or period) and a region
 
 ```python
 import topsipy
@@ -41,7 +41,7 @@ chart = topsipy.generate_top_chart(spotify_token, start='2019-01-01', end='2019-
 
 ```
 
-To get the lyrics, Genius ID an auto-detect the language, you can do as well:
+To additionally retrieve each song's lyrics, Genius ID an auto-detect the language, you can do as well:
 
 ```python
 import topsipy
@@ -49,10 +49,15 @@ import topsipy
 spotify_token = 'YOUR-SPOTIFY-ACCESS-TOKEN-FROM-THE-WEB-API'
 genius_token = 'YOUR-GENIUS-ACCESS-TOKEN-FROM-THE-WEB-API'
 
-chart = topsipy.generate_top_chart(spotify_token, start='2019-01-01', end='2019-10-13', region='mx')
+chart = topsipy.generate_top_chart(spotify_token, start='2019-01-01',
+                                   end='2019-10-13', region='mx', sleep=0.5)
 
-chart_with_lyrics = topsipy.get_lyrics_from_chart(genius_token, chart)
+chart_with_lyrics = topsipy.get_lyrics_from_chart(genius_token, chart, sleep=0.1)
 ```
+
+**Note:** Since these functions imply web requests to get the data, the `sleep` parameter is meant to make the algorithm rest and avoid the server to refuse the requests. By default `sleep` is set to 1 second.
+
+### The DataFrame
 
 A `pandas.DataFrame` will be generated with the data of interest:
 
