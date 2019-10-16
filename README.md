@@ -1,1 +1,73 @@
-# Módulo Recolector para el Análisis del Trending Nacional de Spotify
+# Topsipy
+
+Collector Module for Spotify National Trending Analysis
+
+## Introduction
+
+The Topsipy module makes it easy for data scientist and programmers do get the features from the trending songs on Spotify. You can define period of time and a region and get the main characteristics of the top songs.
+
+## Documentation
+
+The oficial documentations is available on: [TODO]
+
+## Installation
+
+[TODO: Not Yet Published]
+
+```bash
+$ pip install topsipy
+```
+
+## Requirements
+
+- **Python** >= 3.4
+- **Spotify Web API Access Token**, you can request yours [here](https://developer.spotify.com/console/get-audio-features-track/) and selecting `GET TOKEN`. Copy the token on the `OAuth Token` field.
+- (Optional) **Genius Web API Access Token**. From [the official docs page](https://docs.genius.com/#/search-h2) you can just select `Authenticate wih the Docs App To Try`, and copy the `Authorization Bearer` provided after logging in.
+
+## Synopsis
+
+### Usage
+
+Just to get the audio features, given a date of any top chart
+
+```python
+import topsipy
+
+spotify_token = 'YOUR-ACCESS-TOKEN-FROM-THE-WEB-API'
+
+chart = topsipy.generate_top_chart(spotify_token, start='2019-01-01', end='2019-10-13', region='mx')
+
+```
+
+To get the lyrics, Genius ID an auto-detect the language, you can do as well:
+
+```python
+import topsipy
+
+spotify_token = 'YOUR-SPOTIFY-ACCESS-TOKEN-FROM-THE-WEB-API'
+genius_token = 'YOUR-GENIUS-ACCESS-TOKEN-FROM-THE-WEB-API'
+
+chart = topsipy.generate_top_chart(spotify_token, start='2019-01-01', end='2019-10-13', region='mx')
+
+chart_with_lyrics = topsipy.get_lyrics_from_chart(genius_token, chart)
+```
+
+A `pandas.DataFrame` will be generated with the data of interest:
+
+```bash
+>>> chart
+       Position                                      Track Name           Artist  Streams  ... speechiness    tempo time_signature  valen                                                                                ce
+0             1                                   Calma - Remix       Pedro Capó   737894  ...      0.0524  126.899              4    0.7                                                                                61
+1             2                                      Adan y Eva     Paulo Londra   415066  ...      0.3360  171.993              4    0.7                                                                                20
+2             3  Taki Taki (with Selena Gomez, Ozuna & Cardi B)         DJ Snake   409061  ...      0.2290   95.948              4    0.5                                                                                91
+3             4                               MIA (feat. Drake)        Bad Bunny   377855  ...      0.0621   97.062              4    0.1                                                                                58
+4             5                               A Través Del Vaso    Grupo Arranke   346975  ...      0.0297  143.851              3    0.9                                                                                20
+...         ...                                             ...              ...      ...  ...         ...      ...            ...      .                                                                                ..
+14295        46                                       Con Calma     Daddy Yankee   141397  ...      0.0593   93.989              4    0.6                                                                                56
+14296        47                          La Escuela No Me Gustó    Adriel Favela   139350  ...      0.0371  112.548              4    0.8                                                                                44
+14297        48                          De Los Besos Que Te Di  Christian Nodal   139294  ...      0.0422  195.593              4    0.7                                                                                09
+14298        49                                   Pa Mí - Remix            Dalex   137812  ...      0.2200  170.018              4    0.7                                                                                27
+14299        50                                         Circles      Post Malone   131109  ...      0.0395  120.042              4    0.5
+
+[14300 rows x 20 columns]
+```

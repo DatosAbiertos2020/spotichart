@@ -16,10 +16,11 @@ import tqdm
 import time
 import pandas as pd
 
+
 def get_lyrics_from_chart(access_token, chart, sleep=1):
-    """Get track lyrics from a DataFrame with 'Track Id', 
+    """Get track lyrics from a DataFrame with 'Track Id',
     'Track Name' and 'Artist' columns
-    
+
     :param access_token: Genius API Access Token
     :type access_token: str
     :param chart: Pandas DataFrame to know Artist and Track Name
@@ -36,15 +37,16 @@ def get_lyrics_from_chart(access_token, chart, sleep=1):
     print('Fetching Lyrics')
     for index, row in tqdm.tqdm(lyrics_unique.iterrows(), total=lyrics_unique.shape[0]):
         lyrics_features.append(get_lyrics(access_token, row['Track Id'],
-            row['Track Name'], row['Artist']))
+                                          row['Track Name'], row['Artist']))
         time.sleep(sleep)
-        
+
     features = pd.DataFrame(lyrics_features)
     return pd.merge(chart, features, on='Track Id', how='left')
 
-def get_lyrics(access_token,track_id, track_name, artist):
+
+def get_lyrics(access_token, track_id, track_name, artist):
     """Get the Lyrics for an individual track
-    
+
     :param access_token: Genius API Access Token
     :type access_token: str
     :param track_id: Spotify Track Id, to identify different tracks

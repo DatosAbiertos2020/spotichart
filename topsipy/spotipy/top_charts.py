@@ -6,8 +6,6 @@ Based upon the repo by fbkarsdorp
 Located on https://github.com/fbkarsdorp/spotify-chart
 """
 
-
-
 import io
 import sys
 import pandas as pd
@@ -18,7 +16,7 @@ import tqdm
 
 def week_dates(date, weekday=0):
     """Calculate the starting date of a weekday
-    
+
     :param date:  Staring point to calculate week members
     :type date: Date
     :param weekday: Weeks in a month, defaults to 0
@@ -26,7 +24,7 @@ def week_dates(date, weekday=0):
     :return: Days intervale in that week
     :rtype: Date
     """
-    
+
     week_start = date - pd.DateOffset(weekday=weekday, weeks=1)
     week_end = date + pd.DateOffset(weekday=weekday, weeks=0)
     return week_start, week_end
@@ -34,7 +32,7 @@ def week_dates(date, weekday=0):
 
 def get_chart(date, region='en', freq='daily', chart='top200'):
     """Download an individual chart
-    
+
     :param date: Specific date for a Top Chart
     :type date: Date
     :param region: Spotify Top 50 region code, defaults to 'en'
@@ -62,11 +60,11 @@ def get_chart(date, region='en', freq='daily', chart='top200'):
     url = f'https://spotifycharts.com/{chart}/{region}/{freq}/{date}/download'
     try:
         data = io.StringIO(requests.get(url).text)
-        df = pd.read_csv(data, skiprows=1) # Fix Spotify's Note
+        df = pd.read_csv(data, skiprows=1)  # Fix Spotify's Note
     except pd.errors.ParserError:
         df = None
         print(data)
-    except requests.exceptions.RequestException as e:  # This is the correct syntax
+    except requests.exceptions.RequestException:  # This is the correct syntax
         print('\nError during request')
         sys.exit(1)
     return df
@@ -74,7 +72,7 @@ def get_chart(date, region='en', freq='daily', chart='top200'):
 
 def get_charts(start, end=None, region='en', freq='daily', chart='top200', sleep=1):
     """Fetch multiple Charts
-    
+
     :param start: Starting date to download the chart
     :type start: Date
     :param end: End date for an interval of top charts, defaults to None
@@ -103,7 +101,7 @@ def get_charts(start, end=None, region='en', freq='daily', chart='top200', sleep
         sample = 'MS'
     else:
         raise ValueError('Wrong frequency')
-    end_date = start if end == None else end
+    end_date = start if end is None else end
     dfs = []
     for date in tqdm.tqdm(pd.date_range(start=start, end=end_date, freq=sample)):
         df = get_chart(date, region=region, freq=freq, chart=chart)

@@ -10,9 +10,10 @@ import pandas as pd
 import requests
 import urllib.parse
 
+
 def request_song_info(access_token, track_name, artist):
     """Search the track's metadata in Genius
-    
+
     :param access_token: Genius API access token
     :type access_token: str
     :param track_name: Track Name
@@ -25,20 +26,21 @@ def request_song_info(access_token, track_name, artist):
 
     query = urllib.parse.quote(track_name + ' ' + artist, safe='')
     JSONContent = requests.get("https://api.genius.com/search?q=" + query,
-            headers={
-                "User-Agent": "CompuServe Classic/1.22",
-                "Accept": "application/json",
-                "Host": "api.genius.com",
-                "Authorization": "Bearer " + access_token,
-            },
-            cookies={},
-            ).json()
+                               headers={
+                                   "User-Agent": "CompuServe Classic/1.22",
+                                   "Accept": "application/json",
+                                   "Host": "api.genius.com",
+                                   "Authorization": "Bearer " + access_token,
+                               },
+                               cookies={},
+                               ).json()
 
     return JSONContent
 
+
 def search_song(access_token, track_name, artist):
     """Locate the song's lyrics in Genius, to know its url
-    
+
     :param access_token: Genius API Access Token
     :type access_token: str
     :param track_name: Track Name

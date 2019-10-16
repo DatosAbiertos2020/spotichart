@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""topsipy package.
-"""
+"""topsipy package."""
 
 from __future__ import unicode_literals
 

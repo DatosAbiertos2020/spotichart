@@ -51,11 +51,12 @@ setup(
     maintainer="Manolomon",
     maintainer_email="contacto@manolomon.com",
     url="https://github.com/Manolomon/topsipy",
-    description="Spotify top 50 and audio feature scrapper, with lyrics and annotations from Genius",
+    description="Spotify top 50 and audio feature scrapper, \
+        with lyrics and annotations from Genius",
     long_description=long_description,
     license='MIT',
     packages=[
-        "topsipy", "topsipy.spotipy", "topsipy.pyrics"
+        "topsipy", "topsipy.spotipy", "topsipy.lyrics"
     ],
     install_requires=_requirements(),
     tests_require=_requirements_test(),
