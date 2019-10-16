@@ -56,17 +56,17 @@ A `pandas.DataFrame` will be generated with the data of interest:
 
 ```bash
 >>> chart
-       Position                                      Track Name           Artist  Streams  ... speechiness    tempo time_signature  valen                                                                                ce
-0             1                                   Calma - Remix       Pedro Capó   737894  ...      0.0524  126.899              4    0.7                                                                                61
-1             2                                      Adan y Eva     Paulo Londra   415066  ...      0.3360  171.993              4    0.7                                                                                20
-2             3  Taki Taki (with Selena Gomez, Ozuna & Cardi B)         DJ Snake   409061  ...      0.2290   95.948              4    0.5                                                                                91
-3             4                               MIA (feat. Drake)        Bad Bunny   377855  ...      0.0621   97.062              4    0.1                                                                                58
-4             5                               A Través Del Vaso    Grupo Arranke   346975  ...      0.0297  143.851              3    0.9                                                                                20
-...         ...                                             ...              ...      ...  ...         ...      ...            ...      .                                                                                ..
-14295        46                                       Con Calma     Daddy Yankee   141397  ...      0.0593   93.989              4    0.6                                                                                56
-14296        47                          La Escuela No Me Gustó    Adriel Favela   139350  ...      0.0371  112.548              4    0.8                                                                                44
-14297        48                          De Los Besos Que Te Di  Christian Nodal   139294  ...      0.0422  195.593              4    0.7                                                                                09
-14298        49                                   Pa Mí - Remix            Dalex   137812  ...      0.2200  170.018              4    0.7                                                                                27
+       Position                                      Track Name           Artist  Streams  ... speechiness    tempo time_signature  valence
+0             1                                   Calma - Remix       Pedro Capó   737894  ...      0.0524  126.899              4    0.761
+1             2                                      Adan y Eva     Paulo Londra   415066  ...      0.3360  171.993              4    0.720
+2             3  Taki Taki (with Selena Gomez, Ozuna & Cardi B)         DJ Snake   409061  ...      0.2290   95.948              4    0.591
+3             4                               MIA (feat. Drake)        Bad Bunny   377855  ...      0.0621   97.062              4    0.158
+4             5                               A Través Del Vaso    Grupo Arranke   346975  ...      0.0297  143.851              3    0.920
+...         ...                                             ...              ...      ...  ...         ...      ...            ...      ...
+14295        46                                       Con Calma     Daddy Yankee   141397  ...      0.0593   93.989              4    0.656
+14296        47                          La Escuela No Me Gustó    Adriel Favela   139350  ...      0.0371  112.548              4    0.844
+14297        48                          De Los Besos Que Te Di  Christian Nodal   139294  ...      0.0422  195.593              4    0.709
+14298        49                                   Pa Mí - Remix            Dalex   137812  ...      0.2200  170.018              4    0.727
 14299        50                                         Circles      Post Malone   131109  ...      0.0395  120.042              4    0.5
 
 [14300 rows x 20 columns]
