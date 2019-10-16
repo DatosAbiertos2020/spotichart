@@ -20,7 +20,7 @@ $ pip install topsipy
 
 ## Requirements
 
-- **Python** >= 3.4
+- **Python** >= 3.7
 - **Spotify Web API Access Token**, you can request yours [here](https://developer.spotify.com/console/get-audio-features-track/) and selecting `GET TOKEN`. Copy the token on the `OAuth Token` field.
 - (Optional) **Genius Web API Access Token**. From [the official docs page](https://docs.genius.com/#/search-h2) you can just select `Authenticate wih the Docs App To Try`, and copy the `Authorization Bearer` provided after logging in.
 
