@@ -6,7 +6,6 @@ topsipy.spotipy.audio_features module.
 
 """
 
-import tqdm
 import pandas as pd
 import requests
 

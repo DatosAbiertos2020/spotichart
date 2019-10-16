@@ -4,8 +4,6 @@ from __future__ import unicode_literals, absolute_import
 
 import unittest
 
-from topsipy.spotipy import audio_features
-
 
 class TestSum(unittest.TestCase):
 

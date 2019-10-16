@@ -5,8 +5,6 @@ topsipy.lyrics.track_features module.
 
 """
 
-import tqdm
-import pandas as pd
 import requests
 import urllib.parse
 
