@@ -26,8 +26,8 @@ Spotichart
 ==========
 
 
-.. image:: https://github.com/Manolomon/spotichart/workflows/Spotichart/badge.svg
-   :target: https://github.com/Manolomon/spotichart/workflows/Spotichart/badge.svg
+.. image:: https://github.com/Manolomon/spotichart/workflows/spotichart/badge.svg
+   :target: https://github.com/Manolomon/spotichart/workflows/spotichart/badge.svg
    :alt: Badge
  
 .. image:: https://readthedocs.org/projects/spotichart/badge/?version=latest
