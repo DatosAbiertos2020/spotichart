@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-topsipy.lyrics.track_features module.
+spotichart.lyrics.track_features module.
 
 """
 

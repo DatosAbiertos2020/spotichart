@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""topsipy package."""
+"""spotichart package."""
 
 from __future__ import unicode_literals
 

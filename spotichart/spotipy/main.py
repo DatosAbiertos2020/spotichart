@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""topsipy.spotipy.main entry point module."""
+"""spotichart.spotipy.main entry point module."""
 
 from .top_charts import (
     get_charts

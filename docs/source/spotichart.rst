@@ -1,19 +1,19 @@
-topsipy package
-===============
+spotichart package
+==================
 
 Subpackages
 -----------
 
 .. toctree::
 
-   topsipy.language
-   topsipy.lyrics
-   topsipy.spotipy
+   spotichart.language
+   spotichart.lyrics
+   spotichart.spotipy
 
 Module contents
 ---------------
 
-.. automodule:: topsipy
+.. automodule:: spotichart
    :members:
    :undoc-members:
    :show-inheritance:

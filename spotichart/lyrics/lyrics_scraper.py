@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-topsipy.lyrics.lyrics_scraper module.
+spotichart.lyrics.lyrics_scraper module.
 
 """
 

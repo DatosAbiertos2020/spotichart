@@ -2,13 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import re
-import sys
 
 from setuptools import setup
-from setuptools.command.test import test as TestCommand
 
 __version__ = ''
-with open('topsipy/__about__.py', 'r') as fd:
+with open('spotichart/__about__.py', 'r') as fd:
     reg = re.compile(r'__version__ = [\'"]([^\'"]*)[\'"]')
     for line in fd:
         m = reg.match(line)
@@ -26,18 +24,18 @@ with open('README.md', 'r') as fd:
     long_description = fd.read()
 
 setup(
-    name="topsipy",
+    name="spotichart",
     version=__version__,
     author="Manolomon",
     author_email="contacto@manolomon.com",
     maintainer="Manolomon",
     maintainer_email="contacto@manolomon.com",
-    url="https://github.com/Manolomon/topsipy",
+    url="https://github.com/Manolomon/spotichart",
     description="Collector Module for Spotify National Trending Analysis",
     long_description=long_description,
     license="License :: OSI Approved :: MIT License",
     packages=[
-        "topsipy", "topsipy.spotipy", "topsipy.lyrics", "topsipy.language"
+        "spotichart", "spotichart.spotipy", "spotichart.lyrics", "spotichart.language"
     ],
     install_requires=_requirements(),
     python_requires=">=3.6",

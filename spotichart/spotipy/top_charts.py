@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-topsipy.spotipy.top_charts module.
+spotichart.spotipy.top_charts module.
 Based upon the repo by fbkarsdorp
 Located on https://github.com/fbkarsdorp/spotify-chart
 """

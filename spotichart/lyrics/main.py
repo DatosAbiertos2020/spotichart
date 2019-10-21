@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""topsipy.lyrics.track_features entry module."""
+"""spotichart.lyrics.track_features entry module."""
 
 from .track_features import (
     search_song

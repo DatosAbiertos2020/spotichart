@@ -1,17 +1,17 @@
-.. Topsipy documentation master file, created by
+.. Spotichart documentation master file, created by
    sphinx-quickstart on Mon Oct  7 11:46:42 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Topsipy's documentation!
-===================================
+Welcome to Spotichart's documentation!
+======================================
 
 Contents:
 
 .. toctree::
    :maxdepth: 3
 
-   topsipy
+   spotichart
 
 
 Indices and tables
@@ -22,20 +22,20 @@ Indices and tables
 
 
 
-Topsipy
-=======
+Spotichart
+==========
 
 
-.. image:: https://github.com/Manolomon/topsipy/workflows/Topsipy/badge.svg
-   :target: https://github.com/Manolomon/topsipy/workflows/Topsipy/badge.svg
+.. image:: https://github.com/Manolomon/spotichart/workflows/Spotichart/badge.svg
+   :target: https://github.com/Manolomon/spotichart/workflows/Spotichart/badge.svg
    :alt: Badge
  
-.. image:: https://readthedocs.org/projects/topsipy/badge/?version=latest
-   :target: https://topsipy.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/spotichart/badge/?version=latest
+   :target: https://spotichart.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
  
 .. image:: https://api.codacy.com/project/badge/Grade/28b8089c9d9a4ea6ab4acb9c7407d54c
-   :target: https://www.codacy.com/manual/Manolomon/topsipy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Manolomon/topsipy&amp;utm_campaign=Badge_Grade
+   :target: https://www.codacy.com/manual/Manolomon/spotichart?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Manolomon/spotichart&amp;utm_campaign=Badge_Grade
    :alt: Codacy Badge
 
 
@@ -44,12 +44,12 @@ Collector Module for Spotify National Trending Analysis
 Introduction
 ------------
 
-The Topsipy module makes it easy for data scientist and programmers do get the features from the trending songs on Spotify. You can define period of time and a region and get the main characteristics of the top songs.
+The Spotichart module makes it easy for data scientist and programmers get the features from the trending songs on Spotify. You can define period of time and a region and get the main characteristics of the top songs.
 
 Documentation
 -------------
 
-The oficial documentations is available on: `Read The Docs <https://topsipy.readthedocs.io/en/latest/>`_
+The oficial documentations is available on: `Read The Docs <https://spotichart.readthedocs.io/en/latest/>`_
 
 Installation
 ------------
@@ -58,7 +58,7 @@ TODO: Not Yet Published
 
 .. code-block:: bash
 
-   $ pip install topsipy
+   $ pip install spotichart
 
 Requirements
 ------------
@@ -78,25 +78,25 @@ Just to get the audio features, given a date (or period) and a region
 
 .. code-block:: python
 
-   import topsipy
+   import spotichart
 
    spotify_token = 'YOUR-ACCESS-TOKEN-FROM-THE-WEB-API'
 
-   chart = topsipy.generate_top_chart(spotify_token, start='2019-01-01', end='2019-10-13', region='mx')
+   chart = spotichart.generate_top_chart(spotify_token, start='2019-01-01', end='2019-10-13', region='mx')
 
 To additionally retrieve each song's lyrics, Genius ID an auto-detect the language, you can do as well:
 
 .. code-block:: python
 
-   import topsipy
+   import spotichart
 
    spotify_token = 'YOUR-SPOTIFY-ACCESS-TOKEN-FROM-THE-WEB-API'
    genius_token = 'YOUR-GENIUS-ACCESS-TOKEN-FROM-THE-WEB-API'
 
-   chart = topsipy.generate_top_chart(spotify_token, start='2019-01-01',
+   chart = spotichart.generate_top_chart(spotify_token, start='2019-01-01',
                                       end='2019-10-13', region='mx', sleep=0.5)
 
-   chart_with_lyrics = topsipy.get_lyrics_from_chart(genius_token, chart, sleep=0.1)
+   chart_with_lyrics = spotichart.get_lyrics_from_chart(genius_token, chart, sleep=0.1)
 
 **Note:** Since these functions imply web requests to get the data, the ``sleep`` parameter is meant to make the algorithm rest and avoid the server to refuse the requests. By default ``sleep`` is set to 1 second.
 

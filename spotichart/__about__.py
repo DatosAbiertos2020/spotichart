@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Meta data of the topsipy module"""
+"""Meta data of the spotichart module"""
 
 from __future__ import unicode_literals
 

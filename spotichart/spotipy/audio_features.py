@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-topsipy.spotipy.audio_features module.
+spotichart.spotipy.audio_features module.
 
 
 """
