@@ -32,6 +32,7 @@ setup(
     maintainer_email="contacto@manolomon.com",
     url="https://github.com/Manolomon/spotichart",
     description="Collector Module for Spotify National Trending Analysis",
+    long_description_content_type='text/markdown',
     long_description=long_description,
     license="License :: OSI Approved :: MIT License",
     packages=[
