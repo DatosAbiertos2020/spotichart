@@ -10,11 +10,13 @@ import json
 
 # Import spotify access token from environment variable
 access_token = os.environ.get("SPOTIFY_ACCESS_TOKEN", None)
-assert access_token is not None, "Must declare environment variable: SPOTIFY_ACCESS_TOKEN"
+if access_token is not None:
+    raise AssertionError('Must declare environment variable: SPOTIFY_ACCESS_TOKEN')
 
 # Import expired access token from environment variable
 expired_token = os.environ.get("SPOTIFY_EXPIRED_TOKEN", None)
-assert expired_token is not None, "Must declare environment variable: SPOTIFY_EXPIRED_TOKEN"
+if expired_token is not None:
+    'Must declare environment variable: SPOTIFY_EXPIRED_TOKEN'
 
 class TestAudioFeatures(unittest.TestCase):
     def test_successfull_query(self):

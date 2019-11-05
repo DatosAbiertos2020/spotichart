@@ -7,7 +7,6 @@ Located on https://github.com/fbkarsdorp/spotify-chart
 """
 
 import io
-import sys
 import pandas as pd
 import requests
 import time
