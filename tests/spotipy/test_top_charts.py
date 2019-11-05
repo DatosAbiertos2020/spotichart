@@ -2,16 +2,19 @@
 
 from __future__ import unicode_literals, absolute_import
 
+from spotichart.spotipy import top_charts
+
 import unittest
 
+class TestTopChart(unittest.TestCase):
 
-class TestSum(unittest.TestCase):
+    def test_wrong_date_format(self):
+        with self.assertRaises(ValueError):
+            list(top_charts.get_charts('2019-03-25', '2018-03-12', region='mx'))
 
-    def test_sum(self):
-        self.assertEqual(sum([1, 2, 3]), 6, "Should be 6")
-
-    def test_sum_tuple(self):
-        self.assertFalse(sum((1, 2, 2)) == 6, "Should be 6")
+    def test_not_in_charts_boundaries(self):
+        with self.assertRaises(ValueError):
+            list(top_charts.get_chart('2016-03-25', region='mx'))
 
 
 if __name__ == '__main__':

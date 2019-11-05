@@ -52,10 +52,3 @@ def get_audio_features(access_token, track_id):
 
     features = dict(zip(spotify_attr, track_data))
     return features
-
-
-def get_several_audio_features(access_token, track_id_list):
-    """
-    TODO
-    """
-    return 0

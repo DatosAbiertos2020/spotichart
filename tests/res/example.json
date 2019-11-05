@@ -1,0 +1,16 @@
+{
+  "Track Id": "1PKNKessUE10zYclDWNRfE",
+  "acousticness": 0.193,
+  "danceability": 0.678,
+  "duration_ms": 307880,
+  "energy": 0.562,
+  "instrumentalness": 0,
+  "key": 3,
+  "liveness": 0.104,
+  "loudness": -9.197,
+  "mode": 0,
+  "speechiness": 0.508,
+  "tempo": 94.241,  
+  "time_signature": 4,
+  "valence": 0.566
+}

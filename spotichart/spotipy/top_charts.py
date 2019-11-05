@@ -64,9 +64,7 @@ def get_chart(date, region='en', freq='daily', chart='top200'):
     except pd.errors.ParserError:
         df = None
         print(data)
-    except requests.exceptions.RequestException:  # This is the correct syntax
-        print('\nError during request')
-        sys.exit(1)
+
     return df
 
 
