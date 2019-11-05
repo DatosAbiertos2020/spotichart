@@ -29,6 +29,9 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run Unit Tests
+      env:
+        SPOTIFY_ACCESS_TOKEN: ${{ secrets.SPOTIFY_ACCESS_TOKEN }}
+        SPOTIFY_EXPIRED_TOKEN: ${{ secrets.SPOTIFY_EXPIRED_TOKEN }}
       run: |
         pip install pytest
         pytest
