@@ -34,10 +34,9 @@ Spotichart
    :target: https://spotichart.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
  
-.. image:: https://api.codacy.com/project/badge/Grade/28b8089c9d9a4ea6ab4acb9c7407d54c
+.. image:: https://api.codacy.com/project/badge/Grade/67c312b4fdab4303a3be7516fad3d2a6
    :target: https://www.codacy.com/manual/Manolomon/spotichart?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Manolomon/spotichart&amp;utm_campaign=Badge_Grade
    :alt: Codacy Badge
-
 
 Collector Module for Spotify National Trending Analysis
 
