@@ -14,8 +14,6 @@ The oficial documentations is available on: [Read The Docs](https://spotichart.r
 
 ## Installation
 
-TODO: Not Yet Published
-
 ```bash
 $ pip install spotichart
 ```
