@@ -16,7 +16,8 @@ if not access_token:
 # Import expired access token from environment variable
 expired_token = os.environ.get("SPOTIFY_EXPIRED_TOKEN", None)
 if not expired_token:
-    'Must declare environment variable: SPOTIFY_EXPIRED_TOKEN'
+    raise AssertionError('Must declare environment variable: SPOTIFY_EXPIRED_TOKEN')
+
 
 class TestAudioFeatures(unittest.TestCase):
     def test_successfull_query(self):
@@ -35,6 +36,7 @@ class TestAudioFeatures(unittest.TestCase):
     def test_expired_access_token(self):
         with self.assertRaises(ValueError):
             list(audio_features.get_audio_features(expired_token, '1PKNKessUE10zYclDWNRfE'))
+
 
 if __name__ == '__main__':
     unittest.main()

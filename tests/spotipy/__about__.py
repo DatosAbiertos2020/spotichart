@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Meta data of the spotichart module"""
+"""Test set for spotipy submodule"""
 
 from __future__ import unicode_literals
 
