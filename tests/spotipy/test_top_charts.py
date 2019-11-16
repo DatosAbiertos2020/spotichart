@@ -6,7 +6,6 @@ from spotichart.spotipy import top_charts
 
 import unittest
 import pandas as pd
-from datetime import datetime
 
 
 class TestTopChart(unittest.TestCase):

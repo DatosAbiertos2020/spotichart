@@ -30,7 +30,7 @@ setup(
     author_email="contacto@manolomon.com",
     maintainer="Manolomon",
     maintainer_email="contacto@manolomon.com",
-    url="https://github.com/Manolomon/spotichart",
+    url="https://github.com/larsi-uv/spotichart",
     description="Collector Module for Spotify National Trending Analysis",
     long_description_content_type='text/markdown',
     long_description=long_description,
@@ -41,7 +41,7 @@ setup(
     install_requires=_requirements(),
     python_requires=">=3.6",
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Stable",
         "License :: OSI Approved :: MIT License",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3.6",
