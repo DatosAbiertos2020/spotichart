@@ -48,7 +48,7 @@ The Spotichart module makes it easy for data scientist and programmers get the f
 Documentation
 -------------
 
-The oficial documentations is available on: `Read The Docs <https://spotichart.readthedocs.io/en/latest/>`_
+The oficial documentations is available at: `Read The Docs <https://spotichart.readthedocs.io/en/latest/>`_
 
 Installation
 ------------
