@@ -1,6 +1,5 @@
 # Spotichart
-
-![Badge](https://github.com/Manolomon/spotichart/workflows/spotichart/badge.svg) [![Documentation Status](https://readthedocs.org/projects/spotichart/badge/?version=latest)](https://spotichart.readthedocs.io/en/latest/?badge=latest) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/67c312b4fdab4303a3be7516fad3d2a6)](https://www.codacy.com/manual/Manolomon/spotichart?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Manolomon/spotichart&amp;utm_campaign=Badge_Grade)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/larsi-uv/spotichart/spotichart?logo=github) [![Documentation Status](https://readthedocs.org/projects/spotichart/badge/?version=latest)](https://spotichart.readthedocs.io/en/latest/?badge=latest) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/67c312b4fdab4303a3be7516fad3d2a6)](https://www.codacy.com/manual/Manolomon/spotichart?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Manolomon/spotichart&amp;utm_campaign=Badge_Grade)
 
 Collector Module for Spotify National Trending Analysis
 
